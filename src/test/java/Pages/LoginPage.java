@@ -1,10 +1,13 @@
 package Pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utils.Driver;
+
+import static org.testng.Assert.assertTrue;
 
 public class LoginPage {
     public LoginPage(){
@@ -35,5 +38,7 @@ public class LoginPage {
     public WebElement validProfileIcon(){
         return profileIcon;
     }
+
+
 
 }

@@ -4,6 +4,7 @@ import Pages.LoginPage;
 import org.openqa.selenium.Keys;
 import org.testng.Assert;
 import org.testng.annotations.*;
+import Pages.SignUpPage;
 
 import utils.Driver;
 
@@ -17,5 +18,6 @@ public class LoginTests extends TestBase{
         loginPage.validLogin();
         Assert.assertTrue(loginPage.validProfileIcon().isDisplayed());
     }
+
 
 }
