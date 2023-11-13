@@ -22,7 +22,11 @@ public class LoginPage {
     }
 
     public void validLogin(){
-        usernameField.sendKeys("emilyjohnson202324@gmail.com", Keys.TAB,"Duotech2023", Keys.ENTER);
+        usernameField.sendKeys("emilyjohnson202324@gmail.com", Keys.TAB,"Duotech1212", Keys.ENTER);
+    }
+
+    public void invalidLogin(){
+        usernameField.sendKeys("emilyjohnson202324@gmail.com", Keys.TAB, "Duotech2022", Keys.ENTER);
     }
 
     @FindBy(xpath = "//button[@data-testid='login-button']")
@@ -39,6 +43,34 @@ public class LoginPage {
         return profileIcon;
     }
 
+    @FindBy(xpath = "(//button[@class='wC9sIed7pfp47wZbmU6m'])[1]")
+    private WebElement accountPage;
+    public WebElement getAccountPage(){
+        return accountPage;
+    }
 
+    @FindBy(xpath = "//div[@aria-describedby='onClickHintchangePassword']")
+    private WebElement changePasswordBtn;
 
+    public WebElement getChangePasswordBtn() {
+        return changePasswordBtn;
+    }
+
+    @FindBy(xpath = "//input[@id='old_password']")
+    private WebElement currentPassword;
+
+    public WebElement getCurrentPassword() {
+        return currentPassword;
+    }
+
+    @FindBy(xpath = "//div[@class='Wrapper-sc-62m9tu-0 hdvLLY encore-positive-set']")
+    private WebElement positivePasswordChange;
+
+    public WebElement getPositivePasswordChange() {
+        return positivePasswordChange;
+    }
+
+    public String positivePasswordChangeMsg(){
+        return getPositivePasswordChange().getText();
+    }
 }

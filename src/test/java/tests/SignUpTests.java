@@ -46,4 +46,16 @@ public class SignUpTests extends TestBase {
         Assert.assertTrue(signUpPage.validProfileIcon().isDisplayed());
 
     }
+
+    @Test(groups = "smoke")
+    public void signUpNegativeTest() throws InterruptedException {
+        SignUpPage signUpPage = new SignUpPage();
+        signUpPage.getSigUpButton().click();
+        signUpPage.enterEmail("abrorollimov@gmail.com");
+        signUpPage.getSignUpNextButton().click();
+        Thread.sleep(1000);
+        Assert.assertEquals(signUpPage.getErrorMsg(),"This address is already linked to an existing account. To continue, log in.");
+    }
+
+
 }

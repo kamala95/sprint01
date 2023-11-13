@@ -160,4 +160,16 @@ public class SignUpPage {
     public WebElement validProfileIcon(){
         return profileIcon;
     }
+
+    @FindBy(xpath = "//div[@data-encore-id='banner']")
+    private WebElement errorField;
+
+    public WebElement getErrorField() {
+        return errorField;
+    }
+
+    public String getErrorMsg(){
+        return getErrorField().getText();
+    }
+
 }
