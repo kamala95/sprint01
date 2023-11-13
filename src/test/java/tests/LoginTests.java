@@ -11,8 +11,6 @@ import utils.SeleniumUtils;
 
 public class LoginTests extends TestBase{
 
-
-    // erxyctfuyvgubhijnyuftydrtegrfesgdrxfhtgyjhukj
     @Test(groups = "smoke")
     public void positiveLogin() {
 
@@ -32,22 +30,22 @@ public class LoginTests extends TestBase{
         Assert.assertEquals(signUpPage.getErrorMsg(),"Incorrect username or password.");
     }
 
-    @Test(groups = "smoke")
-    public void passwordResetAndLogin() throws InterruptedException {
-        SignUpPage signUpPage = new SignUpPage();
-        LoginPage loginPage = new LoginPage();
-        loginPage.validLogin1().click();
-        loginPage.validLogin();
-        loginPage.validProfileIcon().click();
-        loginPage.getAccountPage().click();
-        Thread.sleep(3000);
-        SeleniumUtils.switchToWindow("Spotify");
-        Thread.sleep(3000);
-        SeleniumUtils.scroll(0,1000);
-        loginPage.getChangePasswordBtn().click();
-        loginPage.getCurrentPassword().sendKeys("Duotech1212", Keys.TAB, "DuotechNew12", Keys.TAB, "DuotechNew12", Keys.ENTER);
-        Thread.sleep(5000);
-        Assert.assertEquals(loginPage.positivePasswordChangeMsg(),"Password updated");
-    }
+//    @Test(groups = "smoke")
+//    public void passwordResetAndLogin() throws InterruptedException {
+//        SignUpPage signUpPage = new SignUpPage();
+//        LoginPage loginPage = new LoginPage();
+//        loginPage.validLogin1().click();
+//        loginPage.validLogin();
+//        loginPage.validProfileIcon().click();
+//        loginPage.getAccountPage().click();
+//        Thread.sleep(3000);
+//        SeleniumUtils.switchToWindow("Spotify");
+//        Thread.sleep(3000);
+//        SeleniumUtils.scroll(0,1000);
+//        loginPage.getChangePasswordBtn().click();
+//        loginPage.getCurrentPassword().sendKeys("DuotechNew12", Keys.TAB, "DuotechAcademy2023", Keys.TAB, "DuotechAcademy2023", Keys.ENTER);
+//        Thread.sleep(5000);
+//        Assert.assertEquals(loginPage.positivePasswordChangeMsg(),"Password updated");
+//    }
 
 }

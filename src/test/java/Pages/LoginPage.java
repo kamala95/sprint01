@@ -22,7 +22,7 @@ public class LoginPage {
     }
 
     public void validLogin(){
-        usernameField.sendKeys("emilyjohnson202324@gmail.com", Keys.TAB,"Duotech1212", Keys.ENTER);
+        usernameField.sendKeys("emilyjohnson202324@gmail.com", Keys.TAB,"DuotechNew12", Keys.ENTER);
     }
 
     public void invalidLogin(){
