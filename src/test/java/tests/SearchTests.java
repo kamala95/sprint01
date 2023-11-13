@@ -13,7 +13,7 @@ import static org.testng.AssertJUnit.assertTrue;
 
 public class SearchTests extends TestBase {
 
-    @Test (groups = "smoke")
+   @Test (groups = "smoke")
     public void searchButtonDisplayedAfterValidLogin() {
         SearchPage searchPage = new SearchPage();
         LoginPage loginPage = new LoginPage();
@@ -22,7 +22,7 @@ public class SearchTests extends TestBase {
         Assert.assertTrue(searchPage.getSearchButton().isDisplayed());
     }
 
-    @Test (groups = "smoke")
+   @Test (groups = "smoke")
     public void searchForSongAfterValidLogin() {
         SearchPage searchPage = new SearchPage();
         LoginPage loginPage = new LoginPage();
