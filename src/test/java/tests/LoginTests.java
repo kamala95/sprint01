@@ -13,7 +13,6 @@ public class LoginTests extends TestBase{
     public void positiveLogin() {
 
         LoginPage loginPage = new LoginPage();
-
         loginPage.validLogin1().click();
         loginPage.validLogin();
         Assert.assertTrue(loginPage.validProfileIcon().isDisplayed());
